@@ -114,6 +114,6 @@ C6B225F5 C3A522BC 835396E5 DC61C7E0 7CFB86D5 2F1596A7 D0F6E257 8EE99547 41D1934F
 
 It was:  
 
-`rc4Key : aesKey : **I still don’t know what the purpose of this is** : aesIV`
+`rc4Key : aesKey : **I still don’t know what the purpose of this is, perhaps IV for another file? since it encrypting the whole dir, if in windows, it might be desktop.ini** : aesIV`
  
  ![](/images-blindly/image15.png)
