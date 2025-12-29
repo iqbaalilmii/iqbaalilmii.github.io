@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import './globals.css';
 import ThemeToggle from './components/ThemeToggle';
 
@@ -35,13 +36,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="container">
           <header className="header">
-            <a className="brand" href="/">
+            <Link className="brand" href="/">
               keii.codes
-            </a>
+            </Link>
             <nav className="nav">
-              <a href="/">Home</a>
-              <a href="/posts/">Posts</a>
-              <a href="/about/">About</a>
+              <Link href="/">Home</Link>
+              <Link href="/posts/">Posts</Link>
+              <Link href="/about/">About</Link>
               <ThemeToggle />
             </nav>
           </header>
