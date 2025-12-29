@@ -116,3 +116,4 @@ It was:
 
 `rc4Key : aesKey : **I still don’t know what the purpose of this is** : aesIV`
  
+ ![](/images-blindly/image15.png)
