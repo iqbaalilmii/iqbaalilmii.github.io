@@ -5,7 +5,7 @@ import ThemeToggle from './components/ThemeToggle';
 
 export const metadata: Metadata = {
   title: {
-    default: 'keii | blog',
+    default: 'keii.malwr.es',
     template: '%s · keii'
   },
   description: 'Security research, forensic analysis, and threat intelligence by a DFIR practitioner.'
@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="container">
           <header className="header">
             <Link className="brand" href="/">
-              keii | blog
+              keii.malwr.es
             </Link>
             <nav className="nav">
               <Link href="/">Home</Link>
