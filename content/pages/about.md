@@ -12,7 +12,6 @@ I spend my time analyzing real-world threats, reverse engineering malicious payl
 
 | Event | Placement | Organizer |
 |-------|-----------|-----------|
-| Hacktheon Sejong 2024 | Honorable Mention III | Sejong City Hall, South Korea |
 | Cyber Jawara International 2024 | 🥇 1st | CSIRT.id & IdNSA |
 | COMPFEST 16 CTF 2024 | 🥇 1st | University of Indonesia |
 | Backdoor CTF 2024 | 🥇 1st | InfoSecIITR |
@@ -27,6 +26,7 @@ I spend my time analyzing real-world threats, reverse engineering malicious payl
 | Nullcon HackIM Berlin 2024 | 🥉 3rd | NullCon |
 | Informatics Fest 2024 | 🥉 3rd | Padjajaran University, PETIR |
 | Cyber Sea Game 2025 | 🥉 3rd | AJCCBC & Thailand NCSA |
+| Hacktheon Sejong 2024 | Honorable Mention III | Sejong City Hall, South Korea |
 
 ---
 
