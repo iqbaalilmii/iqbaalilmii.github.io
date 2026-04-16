@@ -16,17 +16,17 @@ I spend my time analyzing real-world threats, reverse engineering malicious payl
 | Cyber Jawara International 2024 | 🥇 1st | CSIRT.id & IdNSA |
 | COMPFEST 16 CTF 2024 | 🥇 1st | University of Indonesia |
 | Backdoor CTF 2024 | 🥇 1st | InfoSecIITR |
+| KMIPN VI Cyber Security 2024 | 🥇 1st | BAKORMA |
 | TAMUctf 2025 | 🥇 1st | Texas A&M University |
 | BreachCTF 2025 | 🥇 1st | IIT Bombay CSC |
 | 1753CTF 2025 | 🥇 1st | 17 53c |
 | Waskita Manunggal Siber 2026 | 🥇 1st | Indonesian Army Cyber Center |
-| KMIPN VI Cyber Security 2024 | 🥇 1st | BAKORMA |
 | Space Heroes CTF 2024 | 🥈 2nd | FITSEC |
 | NUS GreyCTF 2025 | 🥈 2nd | NUS GreyHats |
 | Indonesia Vocational Olympics 2025 | 🥈 2nd | Vocational Faculty of UB |
 | Nullcon HackIM Berlin 2024 | 🥉 3rd | NullCon |
-| Cyber Sea Game 2025 | 🥉 3rd | AJCCBC & Thailand NCSA |
 | Informatics Fest 2024 | 🥉 3rd | Padjajaran University, PETIR |
+| Cyber Sea Game 2025 | 🥉 3rd | AJCCBC & Thailand NCSA |
 
 ---
 
