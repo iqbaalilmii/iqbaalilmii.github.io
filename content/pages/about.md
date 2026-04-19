@@ -19,8 +19,8 @@ I spend my time analyzing real-world threats, reverse engineering malicious payl
 | TAMUctf 2025 | 🥇 1st | Texas A&M University |
 | BreachCTF 2025 | 🥇 1st | IIT Bombay CSC |
 | 1753CTF 2025 | 🥇 1st | 17 53c |
+| Cyber Jawara CSIRT 2025 | 🥇 1st | CSIRT.id, Indonesia Defense University |
 | Waskita Manunggal Siber 2026 | 🥇 1st | Indonesian Army Cyber Center |
-| Cyber Jawara CSIRT 2026 | 🥇 1st | CSIRT.id, Indonesia Defense University |
 | Space Heroes CTF 2024 | 🥈 2nd | FITSEC |
 | NUS GreyCTF 2025 | 🥈 2nd | NUS GreyHats |
 | Indonesia Vocational Olympics 2025 | 🥈 2nd | Vocational Faculty of UB |
