@@ -14,6 +14,7 @@
   --sketch-lg: 7px 7px 0 #1a1a1a;
   --border-w: 2.5px;
   --radius: 10px;
+  --cta-text: #ffffff;
   color-scheme: light;
 }
 
@@ -523,7 +524,7 @@ main {
   border-radius: 8px;
   background: var(--accent);
   border: var(--border-w) solid var(--frame-border);
-  color: #ffffff;
+  color: var(--cta-text);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   text-decoration: none;
   box-shadow: var(--sketch-sm);
@@ -532,7 +533,7 @@ main {
 .ctaBtn:hover {
   transform: translate(-2px, -2px);
   box-shadow: var(--sketch-md);
-  color: #ffffff;
+  color: var(--cta-text);
   opacity: 1;
 }
 
