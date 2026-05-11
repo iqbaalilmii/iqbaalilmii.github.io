@@ -51,4 +51,6 @@ I spend my time analyzing real-world threats, reverse engineering malicious payl
 | SNI CTF 2025 | SNI Cybersecurity Team | Challenge Author |
 | TECHCOMFEST 2026 | UKM PCC Politeknik Negeri Semarang | Challenge Author |
 | NETCOMP 2026 | FORKOMTRI SV UGM | Challenge Author |
+| Find IT CTF 2026 | DTETI FT UGM | Challenge Author |
+
 
