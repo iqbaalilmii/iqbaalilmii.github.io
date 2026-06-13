@@ -1,33 +1,30 @@
 import Link from 'next/link';
+import { Fragment } from 'react';
 import { getAllPostsMeta } from '../../lib/posts';
 
 export const dynamic = 'force-static';
-
-const PINNED_SLUGS = ['writeups'];
 
 export default function PostsPage() {
   const posts = getAllPostsMeta();
 
   return (
     <>
-      <h1 className="h1">All posts</h1>
-      <p className="heroSubtitle">CTF writeups, research notes, and technical deep-dives</p>
-      <section className="postList">
-        {posts.map((p) => (
-          <article 
-            key={p.slug} 
-            className={`postCard${PINNED_SLUGS.includes(p.slug) ? ' pinned' : ''}`}
-          >
-            <h2 className="postCardTitle">
-              <Link href={`/posts/${p.slug}/`}>{p.title}</Link>
-            </h2>
-            <p className="postCardMeta">
-              {p.pubDate ? <span>{p.pubDate}</span> : null}
-              {p.description ? <span> · {p.description}</span> : null}
-            </p>
+      {posts.map((p, i) => (
+        <Fragment key={p.slug}>
+          <article className="grid">
+            <div className="post-header-snippet">
+              <h2 className="post-title">
+                <Link href={`/posts/${p.slug}/`}>{p.title}</Link>
+              </h2>
+              <p className="post-meta">
+                {p.pubDate && <Link className="post-date" href={`/posts/${p.slug}/`}>{p.pubDate}</Link>}
+                {p.description && <span className="post-author">{p.description}</span>}
+              </p>
+            </div>
           </article>
-        ))}
-      </section>
+          {i < posts.length - 1 && <hr className="snippetbreak" />}
+        </Fragment>
+      ))}
     </>
   );
 }
