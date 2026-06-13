@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Fragment } from 'react';
 import { getAllPostsMeta } from '../lib/posts';
 
 export const dynamic = 'force-static';
@@ -8,53 +9,46 @@ const RECENT_COUNT = 5;
 
 export default function HomePage() {
   const allPosts = getAllPostsMeta();
-  
-  // Separate pinned and non-pinned posts
+
   const pinnedPosts = allPosts.filter(p => PINNED_SLUGS.includes(p.slug));
   const recentPosts = allPosts.filter(p => !PINNED_SLUGS.includes(p.slug)).slice(0, RECENT_COUNT);
 
   return (
     <>
-      <h1 className="h1">keii.malwr.es</h1>
-      <p className="heroSubtitle">Security research, forensic deep-dives, and threat analysis from the trenches.</p>
-
-      {pinnedPosts.length > 0 && (
-        <>
-          <h2 className="sectionTitle">Pinned</h2>
-          <section className="postList">
-            {pinnedPosts.map((p) => (
-              <article key={p.slug} className="postCard pinned">
-                <h3 className="postCardTitle">
-                  <Link href={`/posts/${p.slug}/`}>{p.title}</Link>
-                </h3>
-                <p className="postCardMeta">
-                  {p.pubDate ? <span>{p.pubDate}</span> : null}
-                  {p.description ? <span> · {p.description}</span> : null}
-                </p>
-              </article>
-            ))}
-          </section>
-        </>
-      )}
-
-      <h2 className="sectionTitle">Recent posts</h2>
-      <section className="postList">
-        {recentPosts.map((p) => (
-          <article key={p.slug} className="postCard">
-            <h3 className="postCardTitle">
+      {pinnedPosts.map((p) => (
+        <article key={p.slug} className="grid">
+          <div className="post-header-snippet">
+            <h2 className="post-title">
               <Link href={`/posts/${p.slug}/`}>{p.title}</Link>
-            </h3>
-            <p className="postCardMeta">
-              {p.pubDate ? <span>{p.pubDate}</span> : null}
-              {p.description ? <span> · {p.description}</span> : null}
+            </h2>
+            <p className="post-meta">
+              {p.pubDate && <Link className="post-date" href={`/posts/${p.slug}/`}>{p.pubDate}</Link>}
+              {p.description && <span className="post-author">{p.description}</span>}
             </p>
-          </article>
-        ))}
-      </section>
+          </div>
+        </article>
+      ))}
 
-      <div className="ctaWrapper">
-        <Link href="/posts/" className="ctaBtn">View all posts →</Link>
-      </div>
+      {recentPosts.map((p, i) => (
+        <Fragment key={p.slug}>
+          <article className="grid">
+            <div className="post-header-snippet">
+              <h2 className="post-title">
+                <Link href={`/posts/${p.slug}/`}>{p.title}</Link>
+              </h2>
+              <p className="post-meta">
+                {p.pubDate && <Link className="post-date" href={`/posts/${p.slug}/`}>{p.pubDate}</Link>}
+                {p.description && <span className="post-author">{p.description}</span>}
+              </p>
+            </div>
+          </article>
+          {i < recentPosts.length - 1 && <hr className="snippetbreak" />}
+        </Fragment>
+      ))}
+
+      <p className="expand-post-link">
+        <Link className="more-link" href="/posts/">all posts →</Link>
+      </p>
     </>
   );
 }
