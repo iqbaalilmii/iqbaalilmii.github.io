@@ -23,3 +23,89 @@
   color: #fff;
   overflow-wrap: anywhere;
 }
+
+/* ── Dark mode: forced via data-theme="dark" ────────────────── */
+[data-theme="dark"] {
+  --fg: #f1e9ee;
+  --bg: #181b1b;
+  --lc: var(--lightblue);
+  --lh: var(--lilac);
+  --lightgrey: rgba(255, 255, 255, 0.07);
+}
+
+/* ── Dark mode: auto (follows system, no explicit theme set) ── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --fg: #f1e9ee;
+    --bg: #181b1b;
+    --lc: var(--lightblue);
+    --lh: var(--lilac);
+    --lightgrey: rgba(255, 255, 255, 0.07);
+  }
+}
+
+/* ── post-title link: use fg instead of hardcoded --black ───── */
+[data-theme="dark"] .post-title a { color: var(--fg); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .post-title a {
+    color: var(--fg);
+  }
+}
+
+/* ── Theme toggle widget ─────────────────────────────────────── */
+.theme-toggle {
+  font-family: var(--ff-gsm);
+  font-size: var(--f-12);
+  letter-spacing: .025em;
+  text-transform: lowercase;
+  display: inline-flex;
+  outline: 1px solid var(--fg);
+  vertical-align: middle;
+}
+
+.theme-toggle button {
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  background: none;
+  border: none;
+  border-right: 1px solid var(--fg);
+  padding: .35em .6em;
+  cursor: pointer;
+  color: var(--fg);
+  line-height: 1;
+  transition: background-color .15s, color .15s;
+}
+
+.theme-toggle button:last-child { border-right: none; }
+
+.theme-toggle button.active {
+  background-color: var(--fg);
+  color: var(--bg);
+}
+
+.theme-toggle button:not(.active):hover {
+  background-color: var(--lightgrey);
+}
+
+/* ── Theme toggle nav placement ──────────────────────────────── */
+li.theme-toggle-li { list-style: none; }
+
+/* Mobile: fixed bottom-right so it's always reachable */
+@media (max-width: 799px) {
+  li.theme-toggle-li {
+    position: fixed;
+    bottom: calc(2 * var(--u));
+    right: calc(2 * var(--u));
+    z-index: 100;
+  }
+}
+
+/* Desktop: inline with nav items */
+@media (min-width: 800px) {
+  li.theme-toggle-li {
+    display: inline-block;
+    margin-left: 2em;
+    vertical-align: middle;
+  }
+}

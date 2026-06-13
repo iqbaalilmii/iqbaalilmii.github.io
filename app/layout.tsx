@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import './globals.css';
+import ThemeToggle from './components/ThemeToggle';
 
 export const metadata: Metadata = {
   title: {
@@ -12,7 +13,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Anti-FOUC: restore saved theme before first paint */}
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}` }} />
+      </head>
       <body>
         <header className="page-header">
           <div className="grid">
@@ -40,6 +45,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link className="navlink" href="/about/">
                   <span className="navlink-text">about</span>
                 </Link>
+              </li>
+              <li className="theme-toggle-li">
+                <ThemeToggle />
               </li>
             </ul>
           </nav>
