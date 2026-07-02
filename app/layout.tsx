@@ -57,9 +57,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <footer>
           <p className="privacy">
-            <a href="https://github.com/jonscafe" target="_blank" rel="noopener noreferrer">github</a>
+            <a href="https://github.com/iqbaalilmii" target="_blank" rel="noopener noreferrer">github</a>
             {' · '}
-            <a href="https://www.linkedin.com/in/jomrbn/" target="_blank" rel="noopener noreferrer">linkedin</a>
+            <a href="https://www.linkedin.com/in/iqbaalilmii/" target="_blank" rel="noopener noreferrer">linkedin</a>
             {' · '}
             <span>© 2026 keii</span>
           </p>
