@@ -16,7 +16,7 @@ export type Post = PostMeta & {
 
 const POSTS_DIR = path.join(process.cwd(), 'blog-posts');
 
-const PINNED_SLUGS: string[] = ['writeups'];
+const PINNED_SLUGS: string[] = [];
 
 function slugFromFilename(filename: string): string {
   return filename.replace(/\.md$/, '');
