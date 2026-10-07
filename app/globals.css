@@ -91,6 +91,28 @@
 /* ── Theme toggle nav placement ──────────────────────────────── */
 li.theme-toggle-li { list-style: none; }
 
+/* Keep raw Markdown images in the article text columns and preserve their ratio. */
+.post-content > img {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 800px) {
+  .post-content > img { grid-column: 1 / 7; }
+}
+
+@media (min-width: 1044px) {
+  .post-content > img { grid-column: 2 / 7; }
+}
+
+@media (min-width: 1440px) {
+  .post-content > img { grid-column: 2 / 6; }
+}
+
 /* Mobile: fixed bottom-right so it's always reachable */
 @media (max-width: 799px) {
   li.theme-toggle-li {
