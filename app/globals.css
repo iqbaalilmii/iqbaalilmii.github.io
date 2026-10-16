@@ -92,6 +92,11 @@
 li.theme-toggle-li { list-style: none; }
 
 /* Keep raw Markdown images in the article text columns and preserve their ratio. */
+.post-content,
+.post-content-snippet {
+  font-size: 1.125rem;
+}
+
 .post-content > img {
   grid-column: 1 / -1;
   display: block;
